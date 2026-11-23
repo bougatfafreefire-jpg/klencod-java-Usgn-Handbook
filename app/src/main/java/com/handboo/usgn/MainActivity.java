@@ -1,18 +1,12 @@
 
-package com.newlife.vip;
+package com.handboo.usgn;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebSettings;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.webkit.WebSettings;
 import android.graphics.Color;
 
 public class MainActivity extends Activity {
@@ -37,17 +31,8 @@ public class MainActivity extends Activity {
         settings.setLoadWithOverviewMode(true);
         settings.setUseWideViewPort(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        settings.setLoadsImagesAutomatically(true);
-        settings.setAllowFileAccess(true);
 
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(
-                    WebView view, WebResourceRequest request) {
-                return false;
-            }
-        });
-
+        webView.setWebViewClient(new WebViewClient());
         webView.setWebChromeClient(new WebChromeClient());
 
         webView.setBackgroundColor(Color.BLACK);
